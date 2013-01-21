@@ -38,7 +38,7 @@ After this plugin in installed, it adds a Drag-and-Drop area directly below the 
 
 ## Aside
 
-Creating these features for osTicket was a small weekend side project and I personally hope someone finds it useful! RASHER for LIFE!
+Creating these features for osTicket was a small weekend side project and I personally hope someone finds it useful! RASHER 4 LIFE!
 
 
 
