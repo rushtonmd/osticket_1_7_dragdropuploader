@@ -1,0 +1,135 @@
+.uploadArea {
+min-height:100px;
+height:auto;
+border:2px dotted #ccc;
+cursor:move;
+margin:10px 0;
+position:relative;
+padding:10px;
+width: 95%;
+}
+
+.uploadArea h1,h5 {
+margin:0;
+padding:0;
+}
+
+.uploadArea h1.title {
+font-family:Boogaloo, cursive;
+padding:10px;
+}
+
+.uploadArea h1 {
+color:#ccc;
+width:100%;
+z-index:0;
+text-align:center;
+vertical-align:middle;
+position:absolute;
+top:25px;
+}
+
+
+.hover {
+background-color:rgba(0,255,0,0.02);
+border-color: rgba(0,255,0,0.5);
+}
+
+#loadingBar {
+    display: none;
+}
+
+#loadingProgressG{
+width:205px;
+height:16px;
+overflow:hidden;
+background-color:#D1D1D1;
+-moz-border-radius:8px;
+-webkit-border-radius:8px;
+-ms-border-radius:8px;
+-o-border-radius:8px;
+border-radius:8px;
+}
+
+.loadingProgressG{
+background-color:#FFFFFF;
+margin-top:0;
+margin-left:-205px;
+-moz-animation-name:bounce_loadingProgressG;
+-moz-animation-duration:2.1s;
+-moz-animation-iteration-count:infinite;
+-moz-animation-timing-function:linear;
+-webkit-animation-name:bounce_loadingProgressG;
+-webkit-animation-duration:2.1s;
+-webkit-animation-iteration-count:infinite;
+-webkit-animation-timing-function:linear;
+-ms-animation-name:bounce_loadingProgressG;
+-ms-animation-duration:2.1s;
+-ms-animation-iteration-count:infinite;
+-ms-animation-timing-function:linear;
+-o-animation-name:bounce_loadingProgressG;
+-o-animation-duration:2.1s;
+-o-animation-iteration-count:infinite;
+-o-animation-timing-function:linear;
+animation-name:bounce_loadingProgressG;
+animation-duration:2.1s;
+animation-iteration-count:infinite;
+animation-timing-function:linear;
+width:205px;
+height:16px;
+}
+
+@-moz-keyframes bounce_loadingProgressG{
+0%{
+margin-left:-205px;
+}
+
+100%{
+margin-left:205px;
+}
+
+}
+
+@-webkit-keyframes bounce_loadingProgressG{
+0%{
+margin-left:-205px;
+}
+
+100%{
+margin-left:205px;
+}
+
+}
+
+@-ms-keyframes bounce_loadingProgressG{
+0%{
+margin-left:-205px;
+}
+
+100%{
+margin-left:205px;
+}
+
+}
+
+@-o-keyframes bounce_loadingProgressG{
+0%{
+margin-left:-205px;
+}
+
+100%{
+margin-left:205px;
+}
+
+}
+
+@keyframes bounce_loadingProgressG{
+0%{
+margin-left:-205px;
+}
+
+100%{
+margin-left:205px;
+}
+
+}
