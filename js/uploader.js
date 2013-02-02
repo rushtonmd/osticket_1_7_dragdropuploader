@@ -14,6 +14,14 @@ var DragDropLib = {};
 // Document Ready - Setup All The Things!
 $(function() {
     
+    // Verify compatability of browser
+   if (typeof window.File === "undefined" || 
+        typeof window.FileReader === "undefined" || 
+        typeof window.FileList === "undefined" || 
+        typeof window.Blob === "undefined") {	
+            return false;
+        };
+    
    DragDropLib.setConfigurationSettings();
 
    // At this point, check to see if the container we made exists.
@@ -69,15 +77,13 @@ DragDropLib.initializeDiv = function(){
 };
 
 DragDropLib.setupListeners = function(){
+
+    // Setup the listeners for the drag drop area
+    $(DragDropLib.divContainerID).bind('dragover', DragDropLib.dragOverEvent);
+    $(DragDropLib.divContainerID).bind('dragleave', DragDropLib.dragLeaveEvent);
+    $(DragDropLib.divContainerID).bind('drop', DragDropLib.dropEvent);
     
-    // If everything checks out, setup the listeners for the drag drop area
-    if (window.File && window.FileReader && window.FileList && window.Blob) {	
-             $(DragDropLib.divContainerID).bind('dragover', DragDropLib.dragOverEvent);
-             $(DragDropLib.divContainerID).bind('dragleave', DragDropLib.dragLeaveEvent);
-             $(DragDropLib.divContainerID).bind('drop', DragDropLib.dropEvent);
-             return true;
-    } else
-            return false;
+    return true;
 };
   
 DragDropLib.dragOverEvent = function(e){
